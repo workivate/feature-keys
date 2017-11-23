@@ -7,7 +7,9 @@ use FeatureKeys\FeatureOverride\FeatureOverride;
 
 interface FeatureValueRepository
 {
-    public function getForSpecificOverride(FeatureOverride $override): FeatureValueContainer;
+    public function getForSpecificOverride(FeatureOverride $featureOverride): FeatureValueContainer;
 
-    public function getForOverrides(FeatureOverrideContainer $override): FeatureValueContainer;
+    public function getForOverrides(FeatureOverrideContainer $featureOverrideContainer): FeatureValueContainer;
+
+    public function save(FeatureValue $featureValue, FeatureOverride $featureOverride): void;
 }

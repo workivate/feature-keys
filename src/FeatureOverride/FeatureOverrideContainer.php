@@ -1,9 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace FeatureKeys\FeatureValue;
-
-use FeatureKeys\FeatureOverride\FeatureOverride;
+namespace FeatureKeys\FeatureOverride;
 
 class FeatureOverrideContainer
 {
@@ -21,7 +19,7 @@ class FeatureOverrideContainer
         if ($this->has($featureOverride::getName())) {
             throw FeatureOverrideContainerException::overrideAlreadySet($featureOverride::getName());
         }
-        $this->overrides[$featureOverride::getName()] = $featureOverride;
+        $this->overrides[] = $featureOverride;
     }
 
     public function get(string $featureOverrideName): FeatureOverride
@@ -29,12 +27,22 @@ class FeatureOverrideContainer
         if (!$this->has($featureOverrideName)) {
             throw FeatureOverrideContainerException::overrideNotFound($featureOverrideName);
         }
-        return $this->overrides[$featureOverrideName];
+        foreach ($this->overrides as $override) {
+            if ($override::getName() !== $featureOverrideName) {
+                continue;
+            }
+            return $override;
+        }
     }
 
     public function has(string $featureOverrideName): bool
     {
-        return isset($this->overrides[$featureOverrideName]);
+        foreach ($this->overrides as $override) {
+            if ($override::getName() === $featureOverrideName) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public function serialize(): array

@@ -4,15 +4,14 @@ declare(strict_types=1);
 namespace FeatureKeys\Tests\StarWars\FeatureOverride;
 
 use FeatureKeys\FeatureOverride\FeatureOverride;
-use FeatureKeys\Tests\StarWars\FeatureOverride\Parameters\TeamId;
 
-class TeamOverride extends FeatureOverride
+class GlobalOverride extends FeatureOverride
 {
-    private const NAME = 'TEAM';
+    private const NAME = 'GLOBAL';
 
-    public function __construct(TeamId $teamId)
+    public function __construct()
     {
-        parent::__construct(...[$teamId]);
+        parent::__construct(...[]);
     }
 
     public static function getName(): string

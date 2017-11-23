@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace FeatureKeys\Tests\StarWars\FeatureValue;
+namespace FeatureKeys\Tests\StarWars\FeatureOverride\Parameters;
 
 use FeatureKeys\FeatureOverride\OverrideParameter;
 

@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace FeatureKeys\FeatureValue;
+namespace FeatureKeys\FeatureOverride;
 
 class FeatureOverrideContainerException extends \RuntimeException
 {
@@ -12,6 +12,6 @@ class FeatureOverrideContainerException extends \RuntimeException
 
     public static function overrideNotFound(string $overrideName): self
     {
-        return new self("Override $overrideName was not found.", 1);
+        return new self("Override $overrideName was not found.", 2);
     }
 }
