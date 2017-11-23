@@ -18,7 +18,7 @@ abstract class PercentageFeatureValue extends FeatureValue
         return $this->value;
     }
 
-    public function setValue(string $value): void
+    public function setValue(int $value): void
     {
         $this->validateValue($value);
         $this->value = $value;
