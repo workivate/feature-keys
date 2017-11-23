@@ -5,7 +5,7 @@ namespace FeatureKeys\FeatureValue;
 
 use FeatureKeys\FeatureConfig\FeatureClassNameIterator;
 
-class FeatureValueContainerFactory
+final class FeatureValueContainerFactory
 {
     public function __invoke(FeatureClassNameIterator $config): FeatureValueContainer
     {

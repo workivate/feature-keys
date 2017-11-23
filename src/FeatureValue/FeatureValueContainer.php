@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace FeatureKeys\FeatureValue;
 
-class FeatureValueContainer
+final class FeatureValueContainer
 {
     private $values = [];
 

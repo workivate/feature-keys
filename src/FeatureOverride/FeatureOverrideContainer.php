@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace FeatureKeys\FeatureOverride;
 
-class FeatureOverrideContainer
+final class FeatureOverrideContainer
 {
     private $overrides = [];
 

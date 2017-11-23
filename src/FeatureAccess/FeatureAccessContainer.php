@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace FeatureKeys\FeatureAccess;
 
-class FeatureAccessContainer
+final class FeatureAccessContainer
 {
     private $accesses = [];
 

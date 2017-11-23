@@ -3,14 +3,8 @@ declare(strict_types=1);
 
 namespace FeatureKeys\Tests\FeatureAccess;
 
-use FeatureKeys\FeatureAccess\FeatureAccessContainer;
-use FeatureKeys\FeatureAccess\FeatureAccessContainerException;
 use FeatureKeys\FeatureValue\FeatureValueContainer;
 use FeatureKeys\FeatureValue\FeatureValueContainerException;
-use FeatureKeys\Tests\StarWars\FeatureAccess\Jedi\JediAccess;
-use FeatureKeys\Tests\StarWars\FeatureAccess\Jedi\YodaAccess;
-use FeatureKeys\Tests\StarWars\FeatureAccess\Sith\PlagueisAccess;
-use FeatureKeys\Tests\StarWars\FeatureAccess\Sith\SithAccess;
 use FeatureKeys\Tests\StarWars\FeatureValue\JediName;
 use FeatureKeys\Tests\StarWars\FeatureValue\JediTrainingLevel;
 use FeatureKeys\Tests\StarWars\FeatureValue\LightSaberColor;

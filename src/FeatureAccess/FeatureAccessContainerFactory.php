@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace FeatureKeys\FeatureAccess;
 
-class FeatureAccessContainerFactory
+final class FeatureAccessContainerFactory
 {
     public function __invoke(FeatureAccessConfigIterator $config): FeatureAccessContainer
     {

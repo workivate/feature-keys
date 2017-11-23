@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace FeatureKeys\FeatureOverride;
 
-class FeatureOverrideContainerHydrator
+final class FeatureOverrideContainerHydrator
 {
     public static function unsetAfter(FeatureOverrideContainer $container, string $lastOverrideName): FeatureOverrideContainer
     {
