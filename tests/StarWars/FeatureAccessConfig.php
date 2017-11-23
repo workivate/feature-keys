@@ -12,7 +12,6 @@ use FeatureKeys\Tests\StarWars\FeatureAccess\Jedi\LukeAccess;
 use FeatureKeys\Tests\StarWars\FeatureAccess\Jedi\ObiWanAccess;
 use FeatureKeys\Tests\StarWars\FeatureAccess\Jedi\QuiGonAccess;
 use FeatureKeys\Tests\StarWars\FeatureAccess\Jedi\YodaAccess;
-use FeatureKeys\Tests\StarWars\FeatureAccess\Sith\BaneAccess;
 use FeatureKeys\Tests\StarWars\FeatureAccess\Sith\DookuAccess;
 use FeatureKeys\Tests\StarWars\FeatureAccess\Sith\PlagueisAccess;
 use FeatureKeys\Tests\StarWars\FeatureAccess\Sith\SidiousAccess;
@@ -23,11 +22,11 @@ class FeatureAccessConfig extends FeatureAccessConfigIterator
 {
     public function __construct()
     {
-        $this->addJediConfig();
-        $this->addSithConfig();
+        $this->addJediAccessConfig();
+        $this->addSithAccessConfig();
     }
 
-    private function addJediConfig(): void
+    private function addJediAccessConfig(): void
     {
         $this->add(new ConfigElement(new ClassName(JediAccess::class), null));
         $this->add(new ConfigElement(new ClassName(YodaAccess::class), new ClassName(JediAccess::class)));
@@ -37,7 +36,7 @@ class FeatureAccessConfig extends FeatureAccessConfigIterator
         $this->add(new ConfigElement(new ClassName(LukeAccess::class), new ClassName(ObiWanAccess::class)));
     }
 
-    private function addSithConfig(): void
+    private function addSithAccessConfig(): void
     {
         $this->add(new ConfigElement(new ClassName(SithAccess::class), null));
         $this->add(new ConfigElement(new ClassName(PlagueisAccess::class), new ClassName(SithAccess::class)));

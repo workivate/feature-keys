@@ -9,7 +9,7 @@ abstract class FeatureAccessConfigIterator implements \Iterator
 
     private $config = [];
 
-    public function add(FeatureAccessConfigElement $configElement): void
+    protected function add(FeatureAccessConfigElement $configElement): void
     {
         $this->config[] = $configElement;
     }

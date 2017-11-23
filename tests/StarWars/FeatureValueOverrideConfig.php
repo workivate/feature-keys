@@ -5,9 +5,8 @@ namespace FeatureKeys\Tests\StarWars;
 
 use FeatureKeys\FeatureConfig\ClassName;
 use FeatureKeys\FeatureConfig\FeatureClassNameIterator;
-use FeatureKeys\Tests\StarWars\FeatureAccess\Sith\BaneAccess;
-use FeatureKeys\Tests\StarWars\FeatureValue\CountryOverride;
-use FeatureKeys\Tests\StarWars\FeatureValue\GlobalOverride;
+use FeatureKeys\Tests\StarWars\FeatureOverride\Overrides\CountryOverride;
+use FeatureKeys\Tests\StarWars\FeatureOverride\Overrides\GlobalOverride;
 
 class FeatureValueOverrideConfig extends FeatureClassNameIterator
 {

@@ -5,13 +5,13 @@ namespace FeatureKeys\Tests\FeatureOverride;
 
 use FeatureKeys\FeatureOverride\FeatureOverrideContainer;
 use FeatureKeys\FeatureOverride\FeatureOverrideContainerException;
-use FeatureKeys\Tests\StarWars\FeatureOverride\CountryOverride;
+use FeatureKeys\Tests\StarWars\FeatureOverride\Overrides\CountryOverride;
+use FeatureKeys\Tests\StarWars\FeatureOverride\Overrides\PlayerFromTeamOverride;
+use FeatureKeys\Tests\StarWars\FeatureOverride\Overrides\PlayerOverride;
+use FeatureKeys\Tests\StarWars\FeatureOverride\Overrides\UniverseOverride;
 use FeatureKeys\Tests\StarWars\FeatureOverride\Parameters\CountryId;
 use FeatureKeys\Tests\StarWars\FeatureOverride\Parameters\PlayerId;
 use FeatureKeys\Tests\StarWars\FeatureOverride\Parameters\UniverseId;
-use FeatureKeys\Tests\StarWars\FeatureOverride\PlayerFromTeamOverride;
-use FeatureKeys\Tests\StarWars\FeatureOverride\PlayerOverride;
-use FeatureKeys\Tests\StarWars\FeatureOverride\UniverseOverride;
 use PHPUnit\Framework\TestCase;
 
 class FeatureOverrideContainerTest extends TestCase

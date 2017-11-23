@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace FeatureKeys\FeatureValue;
 
 use FeatureKeys\FeatureOverride\FeatureOverride;
+use FeatureKeys\FeatureOverride\FeatureOverrideContainer;
 
 interface FeatureValueRepository
 {

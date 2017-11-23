@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace FeatureKeys\Tests\StarWars\FeatureOverride;
+namespace FeatureKeys\Tests\StarWars\FeatureOverride\Overrides;
 
 use FeatureKeys\FeatureOverride\FeatureOverride;
 use FeatureKeys\Tests\StarWars\FeatureOverride\Parameters\CountryId;

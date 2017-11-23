@@ -5,14 +5,13 @@ namespace FeatureKeys\Tests\StarWars;
 
 use FeatureKeys\FeatureConfig\ClassName;
 use FeatureKeys\FeatureConfig\FeatureClassNameIterator;
-use FeatureKeys\Tests\StarWars\FeatureAccess\Sith\BaneAccess;
-use FeatureKeys\Tests\StarWars\FeatureValue\CountryAndUniverseOverride;
-use FeatureKeys\Tests\StarWars\FeatureValue\CountryOverride;
-use FeatureKeys\Tests\StarWars\FeatureValue\GlobalOverride;
-use FeatureKeys\Tests\StarWars\FeatureValue\PlayerFromTeamOverride;
-use FeatureKeys\Tests\StarWars\FeatureValue\PlayerOverride;
-use FeatureKeys\Tests\StarWars\FeatureValue\TeamOverride;
-use FeatureKeys\Tests\StarWars\FeatureValue\UniverseOverride;
+use FeatureKeys\Tests\StarWars\FeatureOverride\Overrides\CountryAndUniverseOverride;
+use FeatureKeys\Tests\StarWars\FeatureOverride\Overrides\CountryOverride;
+use FeatureKeys\Tests\StarWars\FeatureOverride\Overrides\GlobalOverride;
+use FeatureKeys\Tests\StarWars\FeatureOverride\Overrides\PlayerFromTeamOverride;
+use FeatureKeys\Tests\StarWars\FeatureOverride\Overrides\PlayerOverride;
+use FeatureKeys\Tests\StarWars\FeatureOverride\Overrides\TeamOverride;
+use FeatureKeys\Tests\StarWars\FeatureOverride\Overrides\UniverseOverride;
 
 class FeatureAccessOverrideConfig extends FeatureClassNameIterator
 {
