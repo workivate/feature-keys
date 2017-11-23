@@ -12,9 +12,6 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {
-
-    },
     "autoload": {
         "psr-4": {
             "FeatureKeys\\": "src"
@@ -22,7 +19,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "FeatureKeysTest\\": "tests"
+            "FeatureKeys\\Tests\\": "tests"
         }
     }
 }
