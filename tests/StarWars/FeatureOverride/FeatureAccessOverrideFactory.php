@@ -55,6 +55,5 @@ class FeatureAccessOverrideFactory implements FeatureOverrideFactory
             default:
                 throw new \RuntimeException("Unknown override $overrideName");
         }
-
     }
 }
