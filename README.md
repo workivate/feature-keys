@@ -18,5 +18,5 @@ Feature Access can have a parent. Parent relates to another Feature Access that 
 - *Feature Override* - Feature Accesses and Feature Values can be overrode. Overrides are defined by parameters.
 
 ## Examples of usage
-There's a StarWars Feature Keys app defined purely for testing purposes. Head on there to see how Accesses, Values, and Overrides
+There's a StarWars Feature Keys app defined purely for testing purposes. Head on there to see how Accesses, Values, Overrides, and config classes
 are defined. https://github.com/workivate/feature-keys/tree/master/tests/StarWars
