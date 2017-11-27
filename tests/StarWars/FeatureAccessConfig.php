@@ -6,17 +6,17 @@ namespace FeatureKeys\Tests\StarWars;
 use FeatureKeys\FeatureAccess\FeatureAccessConfigElement as ConfigElement;
 use FeatureKeys\FeatureAccess\FeatureAccessConfigIterator;
 use FeatureKeys\FeatureConfig\ClassName;
-use FeatureKeys\Tests\StarWars\FeatureAccess\Jedi\AnakinAccess;
-use FeatureKeys\Tests\StarWars\FeatureAccess\Jedi\JediAccess;
-use FeatureKeys\Tests\StarWars\FeatureAccess\Jedi\LukeAccess;
-use FeatureKeys\Tests\StarWars\FeatureAccess\Jedi\ObiWanAccess;
-use FeatureKeys\Tests\StarWars\FeatureAccess\Jedi\QuiGonAccess;
-use FeatureKeys\Tests\StarWars\FeatureAccess\Jedi\YodaAccess;
-use FeatureKeys\Tests\StarWars\FeatureAccess\Sith\DookuAccess;
-use FeatureKeys\Tests\StarWars\FeatureAccess\Sith\PlagueisAccess;
-use FeatureKeys\Tests\StarWars\FeatureAccess\Sith\SidiousAccess;
-use FeatureKeys\Tests\StarWars\FeatureAccess\Sith\SithAccess;
-use FeatureKeys\Tests\StarWars\FeatureAccess\Sith\VaderAccess;
+use FeatureKeys\Tests\StarWars\FeatureAccess\Accesses\Jedi\AnakinAccess;
+use FeatureKeys\Tests\StarWars\FeatureAccess\Accesses\Jedi\JediAccess;
+use FeatureKeys\Tests\StarWars\FeatureAccess\Accesses\Jedi\LukeAccess;
+use FeatureKeys\Tests\StarWars\FeatureAccess\Accesses\Jedi\ObiWanAccess;
+use FeatureKeys\Tests\StarWars\FeatureAccess\Accesses\Jedi\QuiGonAccess;
+use FeatureKeys\Tests\StarWars\FeatureAccess\Accesses\Jedi\YodaAccess;
+use FeatureKeys\Tests\StarWars\FeatureAccess\Accesses\Sith\DookuAccess;
+use FeatureKeys\Tests\StarWars\FeatureAccess\Accesses\Sith\PlagueisAccess;
+use FeatureKeys\Tests\StarWars\FeatureAccess\Accesses\Sith\SidiousAccess;
+use FeatureKeys\Tests\StarWars\FeatureAccess\Accesses\Sith\SithAccess;
+use FeatureKeys\Tests\StarWars\FeatureAccess\Accesses\Sith\VaderAccess;
 
 class FeatureAccessConfig extends FeatureAccessConfigIterator
 {

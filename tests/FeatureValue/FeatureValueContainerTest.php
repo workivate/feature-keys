@@ -5,10 +5,10 @@ namespace FeatureKeys\Tests\FeatureAccess;
 
 use FeatureKeys\FeatureValue\FeatureValueContainer;
 use FeatureKeys\FeatureValue\FeatureValueContainerException;
-use FeatureKeys\Tests\StarWars\FeatureValue\JediName;
-use FeatureKeys\Tests\StarWars\FeatureValue\JediTrainingLevel;
-use FeatureKeys\Tests\StarWars\FeatureValue\LightSaberColor;
-use FeatureKeys\Tests\StarWars\FeatureValue\SithTrainingLevel;
+use FeatureKeys\Tests\StarWars\FeatureValue\Values\JediName;
+use FeatureKeys\Tests\StarWars\FeatureValue\Values\JediTrainingLevel;
+use FeatureKeys\Tests\StarWars\FeatureValue\Values\LightSaberColor;
+use FeatureKeys\Tests\StarWars\FeatureValue\Values\SithTrainingLevel;
 use PHPUnit\Framework\TestCase;
 
 class FeatureValueContainerTest extends TestCase

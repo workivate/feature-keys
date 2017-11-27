@@ -1,13 +1,13 @@
 <?php
 declare(strict_types=1);
 
-namespace FeatureKeys\Tests\StarWars\FeatureAccess\Jedi;
+namespace FeatureKeys\Tests\StarWars\FeatureAccess\Accesses\Jedi;
 
 use FeatureKeys\FeatureAccess\FeatureAccess;
 
-class QuiGonAccess extends FeatureAccess
+class LukeAccess extends FeatureAccess
 {
-    private const NAME = 'QUI_GON';
+    private const NAME = 'LUKE';
 
     public static function getName(): string
     {

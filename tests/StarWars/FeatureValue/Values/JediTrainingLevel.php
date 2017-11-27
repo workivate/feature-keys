@@ -1,21 +1,22 @@
 <?php
 declare(strict_types=1);
 
-namespace FeatureKeys\Tests\StarWars\FeatureValue;
+namespace FeatureKeys\Tests\StarWars\FeatureValue\Values;
 
 use FeatureKeys\FeatureValue\Type\OptionFeatureValue;
 
-class LightSaberColor extends OptionFeatureValue
+class JediTrainingLevel extends OptionFeatureValue
 {
-    private const NAME = 'LIGHT_SABER_COLOR';
+    private const NAME = 'JEDI_TRAINING_LEVEL';
 
     private const OPTIONS = [
-        'red',
-        'blue',
-        'green',
+        'youngling',
+        'padawan',
+        'night',
+        'master',
     ];
 
-    public function __construct(string $value = 'red')
+    public function __construct(string $value = 'youngling')
     {
         parent::__construct($value, self::OPTIONS);
     }

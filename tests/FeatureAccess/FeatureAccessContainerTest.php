@@ -5,10 +5,10 @@ namespace FeatureKeys\Tests\FeatureAccess;
 
 use FeatureKeys\FeatureAccess\FeatureAccessContainer;
 use FeatureKeys\FeatureAccess\FeatureAccessContainerException;
-use FeatureKeys\Tests\StarWars\FeatureAccess\Jedi\JediAccess;
-use FeatureKeys\Tests\StarWars\FeatureAccess\Jedi\YodaAccess;
-use FeatureKeys\Tests\StarWars\FeatureAccess\Sith\PlagueisAccess;
-use FeatureKeys\Tests\StarWars\FeatureAccess\Sith\SithAccess;
+use FeatureKeys\Tests\StarWars\FeatureAccess\Accesses\Jedi\JediAccess;
+use FeatureKeys\Tests\StarWars\FeatureAccess\Accesses\Jedi\YodaAccess;
+use FeatureKeys\Tests\StarWars\FeatureAccess\Accesses\Sith\PlagueisAccess;
+use FeatureKeys\Tests\StarWars\FeatureAccess\Accesses\Sith\SithAccess;
 use PHPUnit\Framework\TestCase;
 
 class FeatureAccessContainerTest extends TestCase
