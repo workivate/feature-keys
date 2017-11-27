@@ -1,7 +1,7 @@
 # The New Feature Keys 
 ### Domain Framework
 
-## What's this about? 
+## About 
 This repository defines how Feature Keys work. However, the Feature Keys themselves are not
 defined here. Therefore, this repository can be used for any project and any set of Feature Keys. Just
 pull the package and define the structure of your Feature Keys in the config files.
@@ -17,6 +17,6 @@ Feature Access can have a parent. Parent relates to another Feature Access that 
 - *Feature Value* - A setting that is represented by a value of a given type. It always has to be set. Supported types are: Integer, Boolean, String, Option, and Percentage.
 - *Feature Override* - Feature Accesses and Feature Values can be overrode. Overrides are defined by parameters.
 
-## Examples of usage?
+## Examples of usage
 There's a StarWars Feature Keys app defined purely for testing purposes. Head on there to see how Accesses, Values, and Overrides
 are defined. https://github.com/workivate/feature-keys/tree/master/tests/StarWars
