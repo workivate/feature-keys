@@ -18,7 +18,8 @@ class FeatureValueOverrideContainerFactory
     public function createFromConfig(FeatureValueOverrideConfig $config): FeatureOverrideContainer
     {
         $container = new FeatureOverrideContainer(...[]);
-        foreach ($config as $overrideClassName) {
+        foreach ($config as $configElement) {
+            $overrideClassName = $configElement->getValue();
             $override = $this->overrideFactory->createFromName($overrideClassName::getName());
             $container->set($override);
         }
