@@ -16,7 +16,12 @@ final class SetAccessCommandHandler
 
     public function __invoke(SetAccessCommand $command): SetAccessCommandResponse
     {
-        $this->repository->save($command->getAccess(), $command->getOverride());
-        return new SetAccessCommandResponse($command->getAccess());
+        $access = $command->getAccess();
+        $override = $command->getOverride();
+        $accesses = $this->repository->getForSpecificOverride($override);
+        $accesses->get($access::getName())->setEnabled($access->isEnabled());
+        $accesses->validate();
+        $this->repository->save($access, $override);
+        return new SetAccessCommandResponse($access);
     }
 }
