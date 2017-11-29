@@ -5,8 +5,6 @@ namespace FeatureKeys\FeatureValue;
 
 abstract class FeatureValue
 {
-    protected $name;
-
     protected $value;
 
     protected function __construct($value)

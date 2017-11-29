@@ -7,13 +7,18 @@ use FeatureKeys\FeatureValue\FeatureValue;
 
 abstract class OptionFeatureValue extends FeatureValue
 {
-    protected $options;
+    private $options;
 
     protected function __construct($value, array $options)
     {
         $this->options = $options;
         $this->validateValue($value);
         parent::__construct($value);
+    }
+
+    public function getValue()
+    {
+        return $this->value;
     }
 
     public function setValue($value): void
