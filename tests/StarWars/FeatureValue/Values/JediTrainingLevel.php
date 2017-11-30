@@ -12,7 +12,7 @@ class JediTrainingLevel extends OptionFeatureValue
     private const OPTIONS = [
         'youngling',
         'padawan',
-        'night',
+        'knight',
         'master',
     ];
 
