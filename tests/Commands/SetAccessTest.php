@@ -8,7 +8,6 @@ use FeatureKeys\Commands\SetAccess\SetAccessCommandHandler;
 use FeatureKeys\FeatureAccess\FeatureAccessContainerFactory;
 use FeatureKeys\FeatureAccess\FeatureAccessRepository;
 use FeatureKeys\Tests\StarWars\FeatureAccess\Accesses\Jedi\JediAccess;
-use FeatureKeys\Tests\StarWars\FeatureAccess\Accesses\Jedi\ObiWanAccess;
 use FeatureKeys\Tests\StarWars\FeatureAccessConfig;
 use FeatureKeys\Tests\StarWars\FeatureOverride\Overrides\GlobalOverride;
 use PHPUnit\Framework\TestCase;
