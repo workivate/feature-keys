@@ -18,13 +18,13 @@
     ],
     "minimum-stability": "dev",
     "autoload": {
-        "psr-4": {
-            "FeatureKeys\\": "src/"
-        }
+        "classmap": [
+            "src/"
+        ]
     },
     "autoload-dev": {
-        "psr-4": {
-            "FeatureKeys\\Tests\\": "tests/"
-        }
+        "classmap": [
+            "tests/"
+        ]
     }
 }
