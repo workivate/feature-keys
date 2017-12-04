@@ -2,7 +2,7 @@
     "name": "workivate/feature-keys",
     "license": "MIT",
     "description": "Feature Keys Domain Framework",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "require": {
         "php": "^7.0"
     },
