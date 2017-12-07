@@ -24,15 +24,13 @@ final class FeatureOverrideContainer
 
     public function get(string $featureOverrideName): FeatureOverride
     {
-        if (!$this->has($featureOverrideName)) {
-            throw FeatureOverrideContainerException::overrideNotFound($featureOverrideName);
-        }
         foreach ($this->overrides as $override) {
             if ($override::getName() !== $featureOverrideName) {
                 continue;
             }
             return $override;
         }
+        throw FeatureOverrideContainerException::overrideNotFound($featureOverrideName);
     }
 
     public function has(string $featureOverrideName): bool

@@ -14,5 +14,6 @@ final class FeatureOverrideContainerHydrator
                 return $hydratedContainer;
             }
         }
+        throw new \LogicException("$lastOverrideName override is not present in the container");
     }
 }
