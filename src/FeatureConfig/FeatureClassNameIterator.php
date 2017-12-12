@@ -5,9 +5,7 @@ namespace FeatureKeys\FeatureConfig;
 
 abstract class FeatureClassNameIterator implements \Iterator
 {
-    private $index = 0;
-
-    private $config = [];
+    use IteratorTrait;
 
     public function add(ClassName $configElement): void
     {
@@ -17,25 +15,5 @@ abstract class FeatureClassNameIterator implements \Iterator
     public function current(): ClassName
     {
         return $this->config[$this->index];
-    }
-
-    public function next(): void
-    {
-        ++$this->index;
-    }
-
-    public function key(): int
-    {
-        return $this->index;
-    }
-
-    public function valid(): bool
-    {
-        return isset($this->config[$this->index]);
-    }
-
-    public function rewind(): void
-    {
-        $this->index = 0;
     }
 }

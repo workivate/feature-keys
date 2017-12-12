@@ -3,11 +3,11 @@ declare(strict_types=1);
 
 namespace FeatureKeys\FeatureAccess;
 
+use FeatureKeys\FeatureConfig\IteratorTrait;
+
 abstract class FeatureAccessConfigIterator implements \Iterator
 {
-    private $index = 0;
-
-    private $config = [];
+    use IteratorTrait;
 
     protected function add(FeatureAccessConfigElement $configElement): void
     {
@@ -17,25 +17,5 @@ abstract class FeatureAccessConfigIterator implements \Iterator
     public function current(): FeatureAccessConfigElement
     {
         return $this->config[$this->index];
-    }
-
-    public function next(): void
-    {
-        ++$this->index;
-    }
-
-    public function key(): int
-    {
-        return $this->index;
-    }
-
-    public function valid(): bool
-    {
-        return isset($this->config[$this->index]);
-    }
-
-    public function rewind(): void
-    {
-        $this->index = 0;
     }
 }
