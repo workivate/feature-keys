@@ -8,9 +8,9 @@ use FeatureKeys\FeatureOverride\FeatureOverrideContainer;
 
 interface FeatureAccessRepository
 {
-    public function getForSpecificOverride(FeatureOverride $featureOverride): FeatureAccessContainer;
+    public function getForSpecificOverride(FeatureOverride $featureOverride, bool $includeUnset = false): FeatureAccessContainer;
 
-    public function getForOverrides(FeatureOverrideContainer $featureOverrideContainer): FeatureAccessContainer;
+    public function getForOverrides(FeatureOverrideContainer $featureOverrideContainer, bool $includeUnset = false): FeatureAccessContainer;
 
     public function save(FeatureAccess $featureAccess, FeatureOverride $featureOverride): void;
 }

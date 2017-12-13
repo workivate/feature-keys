@@ -35,7 +35,7 @@ final class FeatureValueContainer
         return isset($this->values[$FeatureValueName]);
     }
 
-    public function serialize(): array
+    public function getAll(): array
     {
         return $this->values;
     }
