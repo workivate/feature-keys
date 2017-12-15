@@ -2,15 +2,9 @@
     "name": "workivate/feature-keys",
     "license": "MIT",
     "description": "Feature Keys Domain Framework",
-<<<<<<< HEAD
     "version": "1.0.12",
     "require": {
         "php": "^7.1"
-=======
-    "version": "1.0.11",
-    "require": {
-        "php": "^7.2"
->>>>>>> 88b26b8bda994470c00280a1dd9fc21d13be3bc0
     },
     "require-dev": {
         "phpunit/phpunit": "^6.4",
