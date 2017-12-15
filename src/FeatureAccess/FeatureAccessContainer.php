@@ -25,6 +25,18 @@ final class FeatureAccessContainer
         }
     }
 
+    public function override(FeatureAccessContainer $container): void
+    {
+        foreach ($container->getAll() as $access) {
+            try {
+                $this->get($access::getName())->setEnabled($access->isEnabled());
+            } catch (FeatureAccessContainerException $exception) {
+                $this->set($access);
+            }
+        }
+        $this->validate();
+    }
+
     public function set(FeatureAccess $featureAccess): void
     {
         if ($this->has($featureAccess::getName())) {

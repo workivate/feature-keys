@@ -5,6 +5,7 @@ namespace FeatureKeys\Tests\FeatureAccess;
 
 use FeatureKeys\FeatureValue\FeatureValueContainer;
 use FeatureKeys\FeatureValue\FeatureValueContainerException;
+use FeatureKeys\Tests\StarWars\FeatureValue\Values\DrawnToTheDarkSide;
 use FeatureKeys\Tests\StarWars\FeatureValue\Values\JediName;
 use FeatureKeys\Tests\StarWars\FeatureValue\Values\JediTrainingLevel;
 use FeatureKeys\Tests\StarWars\FeatureValue\Values\LightSaberColor;
@@ -56,5 +57,25 @@ class FeatureValueContainerTest extends TestCase
         $this->expectExceptionMessage($expectedException->getMessage());
 
         $container->get(SithTrainingLevel::getName());
+    }
+
+    public function testCanBeOverridden(): void
+    {
+        $container = new FeatureValueContainer(...[
+            new LightSaberColor('blue'),
+            new DrawnToTheDarkSide(false),
+        ]);
+
+        $overridingContainer = new FeatureValueContainer(...[
+            new LightSaberColor('red'),
+            new SithTrainingLevel('adept'),
+        ]);
+
+        $container->override($overridingContainer);
+
+        self::assertSame('red', $container->get(LightSaberColor::getName())->getValue());
+        self::assertFalse($container->get(DrawnToTheDarkSide::getName())->getValue());
+        self::assertSame('adept', $container->get(SithTrainingLevel::getName())->getValue());
+        self::assertCount(3, $container->getAll());
     }
 }

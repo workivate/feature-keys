@@ -6,6 +6,8 @@ namespace FeatureKeys\Tests\FeatureAccess;
 use FeatureKeys\FeatureAccess\FeatureAccessContainer;
 use FeatureKeys\FeatureAccess\FeatureAccessContainerException;
 use FeatureKeys\Tests\StarWars\FeatureAccess\Accesses\Jedi\JediAccess;
+use FeatureKeys\Tests\StarWars\FeatureAccess\Accesses\Jedi\ObiWanAccess;
+use FeatureKeys\Tests\StarWars\FeatureAccess\Accesses\Jedi\QuiGonAccess;
 use FeatureKeys\Tests\StarWars\FeatureAccess\Accesses\Jedi\YodaAccess;
 use FeatureKeys\Tests\StarWars\FeatureAccess\Accesses\Sith\PlagueisAccess;
 use FeatureKeys\Tests\StarWars\FeatureAccess\Accesses\Sith\SithAccess;
@@ -77,5 +79,27 @@ class FeatureAccessContainerTest extends TestCase
         $this->expectExceptionMessage($expectedException->getMessage());
 
         new FeatureAccessContainer(...$invalidAccessSet);
+    }
+
+    public function testCanBeOverridden(): void
+    {
+        $container = new FeatureAccessContainer(...[
+            new JediAccess(true),
+            new YodaAccess(true),
+            new QuiGonAccess(false),
+        ]);
+
+        $overridingContainer = new FeatureAccessContainer(...[
+            new QuiGonAccess(true),
+            new ObiWanAccess(false),
+        ]);
+
+        $container->override($overridingContainer);
+
+        self::assertTrue($container->get(JediAccess::getName())->isEnabled());
+        self::assertTrue($container->get(YodaAccess::getName())->isEnabled());
+        self::assertTrue($container->get(QuiGonAccess::getName())->isEnabled());
+        self::assertTrue($container->get(ObiWanAccess::getName())->isDisabled());
+        self::assertCount(4, $container->getAll());
     }
 }
