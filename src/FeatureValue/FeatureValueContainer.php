@@ -14,6 +14,17 @@ final class FeatureValueContainer
         }
     }
 
+    public function override(FeatureValueContainer $container): void
+    {
+        foreach ($container->getAll() as $value) {
+            try {
+                $this->get($value::getName())->setValue($value->getValue());
+            } catch (FeatureValueContainerException $exception) {
+                $this->set($value);
+            }
+        }
+    }
+
     public function set(FeatureValue $featureValue): void
     {
         if ($this->has($featureValue::getName())) {
