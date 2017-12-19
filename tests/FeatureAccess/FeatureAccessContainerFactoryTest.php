@@ -13,9 +13,8 @@ class FeatureAccessContainerFactoryTest extends TestCase
 {
     public function testCanCreateContainerFromConfig(): void
     {
-        $factory = new FeatureAccessContainerFactory();
         $config = new FeatureAccessConfig();
-        $container = $factory($config);
+        $container = (new FeatureAccessContainerFactory($config))->create();
         self::assertInstanceOf(FeatureAccessContainer::class, $container);
         self::assertCount(
             $this->countConfigElements($config),

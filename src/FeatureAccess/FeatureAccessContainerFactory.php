@@ -5,10 +5,17 @@ namespace FeatureKeys\FeatureAccess;
 
 final class FeatureAccessContainerFactory
 {
-    public function __invoke(FeatureAccessConfigIterator $config): FeatureAccessContainer
+    private $config;
+
+    public function __construct(FeatureAccessConfigIterator $config)
+    {
+        $this->config = $config;
+    }
+
+    public function create(): FeatureAccessContainer
     {
         $container = new FeatureAccessContainer();
-        foreach ($config as $configElement) {
+        foreach ($this->config as $configElement) {
             $className = $configElement->getAccessClassName()->getValue();
             $featureAccess = new $className();
             $parentClassName = $configElement->getAccessParentClassName();

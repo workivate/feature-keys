@@ -18,8 +18,8 @@ class SetAccessTest extends TestCase
 
     public function setUp(): void
     {
-        $accessesFactory = new FeatureAccessContainerFactory();
-        $accesses = $accessesFactory(new FeatureAccessConfig());
+        $accessesFactory = new FeatureAccessContainerFactory(new FeatureAccessConfig());
+        $accesses = $accessesFactory->create();
 
         $this->repository = \Mockery::mock(FeatureAccessRepository::class)
             ->shouldReceive('save')
