@@ -36,8 +36,8 @@ class GetAccessesTest extends TestCase
             )
         );
         $this->overrides = $overridesFactory->createFromConfig(new FeatureAccessOverrideConfig());
-        $accessesFactory = new FeatureAccessContainerFactory();
-        $this->accesses = $accessesFactory(new FeatureAccessConfig());
+        $accessesFactory = new FeatureAccessContainerFactory(new FeatureAccessConfig());
+        $this->accesses = $accessesFactory->create();
         $this->repository = \Mockery::mock(FeatureAccessRepository::class)
             ->shouldReceive('getForOverrides')
             ->andReturn($this->accesses)
