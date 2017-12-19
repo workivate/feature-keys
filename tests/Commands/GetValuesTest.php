@@ -28,8 +28,8 @@ class GetValuesTest extends TestCase
             new FeatureValueOverrideFactory(new CountryId('polska'))
         );
         $this->overrides = $overridesFactory->createFromConfig(new FeatureValueOverrideConfig());
-        $valuesFactory = new FeatureValueContainerFactory();
-        $this->values = $valuesFactory(new FeatureValueConfig());
+        $valuesFactory = new FeatureValueContainerFactory(new FeatureValueConfig());
+        $this->values = $valuesFactory->create();
         $this->repository = \Mockery::mock(FeatureValueRepository::class)
             ->shouldReceive('getForOverrides')
             ->andReturn($this->values)

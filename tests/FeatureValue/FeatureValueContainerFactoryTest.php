@@ -13,9 +13,8 @@ class FeatureValueContainerFactoryTest extends TestCase
 {
     public function testCanCreateContainerFromConfig(): void
     {
-        $factory = new FeatureValueContainerFactory();
         $config = new FeatureValueConfig();
-        $container = $factory($config);
+        $container = (new FeatureValueContainerFactory($config))->create();
 
         self::assertInstanceOf(FeatureValueContainer::class, $container);
         self::assertCount(

@@ -7,10 +7,17 @@ use FeatureKeys\FeatureConfig\FeatureClassNameIterator;
 
 final class FeatureValueContainerFactory
 {
-    public function __invoke(FeatureClassNameIterator $config): FeatureValueContainer
+    private $config;
+
+    public function __construct(FeatureClassNameIterator $config)
+    {
+        $this->config = $config;
+    }
+
+    public function create(): FeatureValueContainer
     {
         $container = new FeatureValueContainer();
-        foreach ($config as $configElement) {
+        foreach ($this->config as $configElement) {
             $className = $configElement->getValue();
             $container->set(new $className());
         }
