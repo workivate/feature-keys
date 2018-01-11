@@ -37,6 +37,11 @@ class ValueType
         return new self('string');
     }
 
+    public function equals(self $type): bool
+    {
+        return $this->type === $type;
+    }
+
     public function __toString(): string
     {
         return $this->type;
