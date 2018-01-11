@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace FeatureKeys\FeatureValue\Type;
 
 use FeatureKeys\FeatureValue\FeatureValue;
+use FeatureKeys\FeatureValue\ValueType;
 
 abstract class OptionFeatureValue extends FeatureValue
 {
@@ -13,12 +14,17 @@ abstract class OptionFeatureValue extends FeatureValue
     {
         $this->options = $options;
         $this->validateValue($value);
-        parent::__construct($value);
+        parent::__construct($value, ValueType::option());
     }
 
     public function getValue()
     {
         return $this->value;
+    }
+
+    public function getOptions(): array
+    {
+        return $this->options;
     }
 
     public function setValue($value): void
