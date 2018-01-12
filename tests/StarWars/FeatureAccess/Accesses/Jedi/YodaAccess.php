@@ -9,8 +9,14 @@ class YodaAccess extends FeatureAccess
 {
     private const NAME = 'YODA';
 
+    private const DESCRIPTION = 'Defines access to Yoda\'s features.';
+
     public static function getName(): string
     {
         return self::NAME;
+    }
+    public static function getDescription(): string
+    {
+        return self ::DESCRIPTION;
     }
 }

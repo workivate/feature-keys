@@ -22,5 +22,7 @@ abstract class FeatureValue
 
     abstract public static function getName(): string;
 
+    abstract public static function getDescription() : string;
+
     abstract public function getValue();
 }

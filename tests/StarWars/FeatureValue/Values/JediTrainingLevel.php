@@ -16,6 +16,8 @@ class JediTrainingLevel extends OptionFeatureValue
         'master',
     ];
 
+    private const DESCRIPTION = 'The people who are born deeply connected to the Force have better reflexes; through training and meditation, they are able to achieve various supernatural feats (such as telekinesis, clairvoyance, precognition, and mind control)';
+
     public function __construct(string $value = 'youngling')
     {
         parent::__construct($value, self::OPTIONS);
@@ -30,4 +32,10 @@ class JediTrainingLevel extends OptionFeatureValue
     {
         return $this->value;
     }
+
+    public static function getDescription(): string
+    {
+        return self::DESCRIPTION;
+    }
+
 }
