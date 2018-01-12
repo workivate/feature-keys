@@ -19,7 +19,7 @@ class SithTrainingLevel extends OptionFeatureValue
         'lord',
     ];
 
-    private const DESCRIPTION = 'R2-D2 (/ɑːrtuː.diːtuː/), or Artoo-Detoo[citation needed], is a fictional robot character in the Star Wars franchise created by George Lucas. A small astromech droid, R2-D2 is a major character and appears in all 8 Star Wars films to date.';
+    private const DESCRIPTION = 'Defines the sith\'s training level.';
 
     public function __construct(string $value = 'minion')
     {

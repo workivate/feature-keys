@@ -9,7 +9,7 @@ class SithName extends StringFeatureValue
 {
     private const NAME = 'SITH_NAME';
 
-    private const DESCRIPTION = 'A stormtrooper is a fictional soldier in the Star Wars franchise created by George Lucas. Introduced in Star Wars (1977), the stormtroopers are the main ground force of the Galactic Empire, under the leadership of Emperor Palpatine and his commanders, most notably Darth Vader and Grand Moff Tarkin.';
+    private const DESCRIPTION = 'Defines the sith\'s name';
 
     public function __construct(string $name = '')
     {

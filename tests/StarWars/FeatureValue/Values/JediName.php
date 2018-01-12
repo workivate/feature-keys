@@ -9,7 +9,7 @@ class JediName extends StringFeatureValue
 {
     private const NAME = 'JEDI_NAME';
 
-    private const DESCRIPTION = 'The spiritual and mystical element of the Star Wars galaxy is known as "the Force". It is described in the original film as "an energy field created by all living things [that] surrounds us, penetrates us, [and] binds the galaxy together.';
+    private const DESCRIPTION = 'Defines the jedi\'s name';
 
     public function __construct(string $name = '')
     {

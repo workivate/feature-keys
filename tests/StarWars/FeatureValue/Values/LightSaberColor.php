@@ -15,7 +15,7 @@ class LightSaberColor extends OptionFeatureValue
         'green',
     ];
 
-    private const DESCRIPTION = 'Months later, Lucas started work on his second film\'s script draft, The Journal of the Whills, telling the tale of the training of apprentice CJ Thorpe as a "Jedi-Bendu" space commando by the legendary Mace Windy.';
+    private const DESCRIPTION = 'Defines the light saber\'s color';
 
     public function __construct(string $value = 'red')
     {
