@@ -16,7 +16,7 @@ class JediTrainingLevel extends OptionFeatureValue
         'master',
     ];
 
-    private const DESCRIPTION = 'Defines the jedi\'s training level';
+    private const DESCRIPTION = 'Defines the jedi\'s training level.';
 
     public function __construct(string $value = 'youngling')
     {

@@ -15,7 +15,7 @@ The New Feature Keys consists of three main parts:
 It is represented by a boolean value that always needs to be set. Feature Access can be disabled or enabled. 
 Feature Access can have a parent. Parent relates to another Feature Access that needs to be enabled in order to enable given access.
 - *Feature Value* - A setting that is represented by a value of a given type. It always has to be set. Supported types are: Integer, Boolean, String, Option, and Percentage.
-- *Feature Override* - : Feature Accesses and Feature Values can be overridden. Overrides are defined by parameters.
+- *Feature Override* - Feature Accesses and Feature Values can be overridden. Overrides are defined by parameters.
 
 ## Examples of usage
 There's a StarWars Feature Keys app defined purely for testing purposes. Head on there to see how Accesses, Values, Overriodes, and config classes

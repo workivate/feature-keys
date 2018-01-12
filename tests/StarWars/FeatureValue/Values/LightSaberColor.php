@@ -15,7 +15,7 @@ class LightSaberColor extends OptionFeatureValue
         'green',
     ];
 
-    private const DESCRIPTION = 'Defines the light saber\'s color';
+    private const DESCRIPTION = 'Defines the light saber\'s color.';
 
     public function __construct(string $value = 'red')
     {

@@ -9,7 +9,7 @@ class AnakinAccess extends FeatureAccess
 {
     private const NAME = 'ANAKIN';
 
-    private const DESCRIPTION = "Defines access to Anakin\'s features.";
+    private const DESCRIPTION = 'Defines access to Anakin\'s features.';
 
     public static function getName(): string
     {

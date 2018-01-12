@@ -9,7 +9,7 @@ class LukeAccess extends FeatureAccess
 {
     private const NAME = 'LUKE';
 
-    private const DESCRIPTION = 'Defines access to Luke Skywalker\'s  features';
+    private const DESCRIPTION = 'Defines access to Luke Skywalker\'s  features.';
 
     public static function getName(): string
     {

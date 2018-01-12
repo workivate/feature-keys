@@ -9,7 +9,7 @@ class SithName extends StringFeatureValue
 {
     private const NAME = 'SITH_NAME';
 
-    private const DESCRIPTION = 'Defines the sith\'s name';
+    private const DESCRIPTION = 'Defines the sith\'s name.';
 
     public function __construct(string $name = '')
     {
