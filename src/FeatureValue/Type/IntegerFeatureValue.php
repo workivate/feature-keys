@@ -4,12 +4,13 @@ declare(strict_types=1);
 namespace FeatureKeys\FeatureValue\Type;
 
 use FeatureKeys\FeatureValue\FeatureValue;
+use FeatureKeys\FeatureValue\ValueType;
 
 abstract class IntegerFeatureValue extends FeatureValue
 {
     protected function __construct(int $value)
     {
-        parent::__construct($value);
+        parent::__construct($value, ValueType::integer());
     }
 
     public function getValue(): int

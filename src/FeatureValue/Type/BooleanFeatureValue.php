@@ -4,12 +4,13 @@ declare(strict_types=1);
 namespace FeatureKeys\FeatureValue\Type;
 
 use FeatureKeys\FeatureValue\FeatureValue;
+use FeatureKeys\FeatureValue\ValueType;
 
 abstract class BooleanFeatureValue extends FeatureValue
 {
     protected function __construct(bool $value)
     {
-        parent::__construct($value);
+        parent::__construct($value, ValueType::boolean());
     }
 
     public function getValue(): bool

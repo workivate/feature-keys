@@ -4,13 +4,14 @@ declare(strict_types=1);
 namespace FeatureKeys\FeatureValue\Type;
 
 use FeatureKeys\FeatureValue\FeatureValue;
+use FeatureKeys\FeatureValue\ValueType;
 
 abstract class PercentageFeatureValue extends FeatureValue
 {
     protected function __construct(int $value)
     {
         $this->validateValue($value);
-        parent::__construct($value);
+        parent::__construct($value, ValueType::percentage());
     }
 
     public function getValue(): string
