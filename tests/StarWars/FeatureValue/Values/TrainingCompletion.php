@@ -9,7 +9,7 @@ class TrainingCompletion extends PercentageFeatureValue
 {
     private const NAME = 'TRAINING_COMPLETION';
 
-    private const DESCRIPTION = 'Defines the percentage of the completion of the training.';
+    private const DESCRIPTION = 'Defines the percentage of completion of the training.';
 
     public function __construct(int $completion = 0)
     {

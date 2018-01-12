@@ -1,14 +1,7 @@
 <?php
 declare(strict_types=1);
 
-/*
-At the moment Feature Accesses and Feature Values are defined by names. Because that often isn't descriptive enough, it has been decided that apart from a name, a Feature Key should also be defined by a description.
 
-* TODOs *
-* Enforce static method getDescription on abstract FeatureAccess and FeatureValue
-* Implement descriptions in the StarWars domain
-* Test the descriptions 
-*/
 namespace FeatureKeys\FeatureAccess;
 
 abstract class FeatureAccess
