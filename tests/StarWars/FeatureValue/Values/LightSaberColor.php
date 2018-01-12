@@ -15,6 +15,8 @@ class LightSaberColor extends OptionFeatureValue
         'green',
     ];
 
+    private const DESCRIPTION = 'Defines the light saber\'s color.';
+
     public function __construct(string $value = 'red')
     {
         parent::__construct($value, self::OPTIONS);
@@ -28,5 +30,10 @@ class LightSaberColor extends OptionFeatureValue
     public function getValue(): string
     {
         return $this->value;
+    }
+
+    public static function getDescription(): string
+    {
+        return self::DESCRIPTION;
     }
 }

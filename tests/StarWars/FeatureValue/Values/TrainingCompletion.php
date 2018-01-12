@@ -9,6 +9,8 @@ class TrainingCompletion extends PercentageFeatureValue
 {
     private const NAME = 'TRAINING_COMPLETION';
 
+    private const DESCRIPTION = 'Defines the percentage of completion of the training.';
+
     public function __construct(int $completion = 0)
     {
         parent::__construct($completion);
@@ -17,5 +19,10 @@ class TrainingCompletion extends PercentageFeatureValue
     public static function getName(): string
     {
         return self::NAME;
+    }
+
+    public static function getDescription(): string
+    {
+        return self::DESCRIPTION;
     }
 }

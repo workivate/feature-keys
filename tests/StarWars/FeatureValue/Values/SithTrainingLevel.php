@@ -19,6 +19,8 @@ class SithTrainingLevel extends OptionFeatureValue
         'lord',
     ];
 
+    private const DESCRIPTION = 'Defines the sith\'s training level.';
+
     public function __construct(string $value = 'minion')
     {
         parent::__construct($value, self::OPTIONS);
@@ -32,5 +34,10 @@ class SithTrainingLevel extends OptionFeatureValue
     public function getValue(): string
     {
         return $this->value;
+    }
+
+    public static function getDescription(): string
+    {
+        return self::DESCRIPTION;
     }
 }

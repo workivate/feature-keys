@@ -9,8 +9,15 @@ class VaderAccess extends FeatureAccess
 {
     private const NAME = 'VADER';
 
+    private const DESCRIPTION = 'Defines access to Vader\'s features.';
+
     public static function getName(): string
     {
         return self::NAME;
+    }
+
+    public static function getDescription(): string
+    {
+        return self ::DESCRIPTION;
     }
 }

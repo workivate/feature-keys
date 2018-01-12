@@ -9,8 +9,15 @@ class SithAccess extends FeatureAccess
 {
     private const NAME = 'SITH';
 
+    private const DESCRIPTION = 'Defines access to Sith\'s features.';
+
     public static function getName(): string
     {
         return self::NAME;
+    }
+
+    public static function getDescription(): string
+    {
+        return self ::DESCRIPTION;
     }
 }

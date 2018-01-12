@@ -9,6 +9,8 @@ class SithName extends StringFeatureValue
 {
     private const NAME = 'SITH_NAME';
 
+    private const DESCRIPTION = 'Defines the sith\'s name.';
+
     public function __construct(string $name = '')
     {
         parent::__construct($name);
@@ -17,5 +19,10 @@ class SithName extends StringFeatureValue
     public static function getName(): string
     {
         return self::NAME;
+    }
+
+    public static function getDescription(): string
+    {
+        return self::DESCRIPTION;
     }
 }

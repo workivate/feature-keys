@@ -11,6 +11,8 @@ class MidichlorianCount extends IntegerFeatureValue
 
     private const NON_FORCE_SENSITIVE_COUNT = 2000;
 
+    private const DESCRIPTION = 'Defines the count of midichlorian.';
+
     public function __construct(int $count = self::NON_FORCE_SENSITIVE_COUNT)
     {
         parent::__construct($count);
@@ -19,5 +21,10 @@ class MidichlorianCount extends IntegerFeatureValue
     public static function getName(): string
     {
         return self::NAME;
+    }
+
+    public static function getDescription(): string
+    {
+        return self::DESCRIPTION;
     }
 }

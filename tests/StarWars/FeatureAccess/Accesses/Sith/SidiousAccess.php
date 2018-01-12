@@ -9,8 +9,15 @@ class SidiousAccess extends FeatureAccess
 {
     private const NAME = 'SIDIOUS';
 
+    private const DESCRIPTION = 'Defines access to Sidious\' features.';
+
     public static function getName(): string
     {
         return self::NAME;
+    }
+
+    public static function getDescription(): string
+    {
+        return self ::DESCRIPTION;
     }
 }

@@ -9,6 +9,8 @@ class JediName extends StringFeatureValue
 {
     private const NAME = 'JEDI_NAME';
 
+    private const DESCRIPTION = 'Defines the jedi\'s name.';
+
     public function __construct(string $name = '')
     {
         parent::__construct($name);
@@ -17,5 +19,10 @@ class JediName extends StringFeatureValue
     public static function getName(): string
     {
         return self::NAME;
+    }
+
+    public static function getDescription(): string
+    {
+        return self::DESCRIPTION;
     }
 }

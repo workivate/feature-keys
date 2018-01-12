@@ -9,6 +9,8 @@ class DrawnToTheDarkSide extends BooleanFeatureValue
 {
     private const NAME = 'DRAWN_TO_THE_DARK_SIDE';
 
+    private const DESCRIPTION = 'Defines if the user was drawn to the dark side.';
+
     public function __construct($isDrawn = true)
     {
         parent::__construct($isDrawn);
@@ -17,5 +19,10 @@ class DrawnToTheDarkSide extends BooleanFeatureValue
     public static function getName(): string
     {
         return self::NAME;
+    }
+
+    public static function getDescription(): string
+    {
+        return self::DESCRIPTION;
     }
 }

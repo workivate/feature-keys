@@ -16,6 +16,8 @@ class JediTrainingLevel extends OptionFeatureValue
         'master',
     ];
 
+    private const DESCRIPTION = 'Defines the jedi\'s training level.';
+
     public function __construct(string $value = 'youngling')
     {
         parent::__construct($value, self::OPTIONS);
@@ -29,5 +31,10 @@ class JediTrainingLevel extends OptionFeatureValue
     public function getValue(): string
     {
         return $this->value;
+    }
+
+    public static function getDescription(): string
+    {
+        return self::DESCRIPTION;
     }
 }

@@ -9,8 +9,15 @@ class QuiGonAccess extends FeatureAccess
 {
     private const NAME = 'QUI_GON';
 
+    private const DESCRIPTION = 'Defines access to Qui-gon\'s features.';
+
     public static function getName(): string
     {
         return self::NAME;
+    }
+
+    public static function getDescription(): string
+    {
+        return self ::DESCRIPTION;
     }
 }
