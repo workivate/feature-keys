@@ -17,8 +17,6 @@ abstract class FeatureAccess
 
     private $parent;
 
-    private $description;
-
     public function __construct(bool $enabled = false)
     {
         $this->enabled = $enabled;
