@@ -18,4 +18,14 @@ abstract class FeatureOverride
     {
         return $this->parameters;
     }
+
+    public function getParameterValue(string $parameterName): ?string
+    {
+        foreach ($this->parameters as $parameter) {
+            if ($parameter->getName() === $parameterName) {
+                return $parameter->getValue();
+            }
+        }
+        return null;
+    }
 }
