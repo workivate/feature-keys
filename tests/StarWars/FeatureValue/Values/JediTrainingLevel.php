@@ -37,5 +37,4 @@ class JediTrainingLevel extends OptionFeatureValue
     {
         return self::DESCRIPTION;
     }
-
 }

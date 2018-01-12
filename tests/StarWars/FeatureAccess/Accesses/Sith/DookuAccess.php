@@ -15,6 +15,7 @@ class DookuAccess extends FeatureAccess
     {
         return self::NAME;
     }
+
     public static function getDescription(): string
     {
         return self ::DESCRIPTION;
