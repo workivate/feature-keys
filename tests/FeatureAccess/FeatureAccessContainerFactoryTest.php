@@ -18,7 +18,7 @@ class FeatureAccessContainerFactoryTest extends TestCase
         self::assertInstanceOf(FeatureAccessContainer::class, $container);
         self::assertCount(
             $this->countConfigElements($config),
-            $container->getAll()
+            $container
         );
     }
 

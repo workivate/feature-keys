@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace FeatureKeys\FeatureAccess;
 
-final class FeatureAccessContainer implements \Iterator
+final class FeatureAccessContainer implements \Iterator, \Countable
 {
     private $accesses = [];
 
@@ -78,7 +78,7 @@ final class FeatureAccessContainer implements \Iterator
         return key($this->accesses);
     }
 
-    public function valid()
+    public function valid(): bool
     {
         return $this->key() !== null;
     }
@@ -86,5 +86,10 @@ final class FeatureAccessContainer implements \Iterator
     public function rewind()
     {
         return reset($this->accesses);
+    }
+
+    public function count()
+    {
+        return count($this->accesses);
     }
 }
