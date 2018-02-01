@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace FeatureKeys\FeatureAccess;
 
-final class FeatureAccessContainer
+final class FeatureAccessContainer implements \Iterator
 {
     private $accesses = [];
 
@@ -27,7 +27,7 @@ final class FeatureAccessContainer
 
     public function override(FeatureAccessContainer $container): void
     {
-        foreach ($container->getAll() as $access) {
+        foreach ($container as $access) {
             try {
                 $this->get($access::getName())->setEnabled($access->isEnabled());
             } catch (FeatureAccessContainerException $exception) {
@@ -61,5 +61,30 @@ final class FeatureAccessContainer
     public function getAll(): array
     {
         return $this->accesses;
+    }
+
+    public function current()
+    {
+        return current($this->accesses);
+    }
+
+    public function next()
+    {
+        return next($this->accesses);
+    }
+
+    public function key()
+    {
+        return key($this->accesses);
+    }
+
+    public function valid()
+    {
+        return $this->key() !== null;
+    }
+
+    public function rewind()
+    {
+        return reset($this->accesses);
     }
 }
