@@ -32,19 +32,15 @@ class FeatureOverrideContainerHydratorTest extends TestCase
 
     public function testCanUnsetAfterFirstElement(): void
     {
-        $serializedContainer = $this->container->serialize();
-        $firstElement = reset($serializedContainer);
+        $firstElement = $this->container->rewind();
         $hydratedContainer = FeatureOverrideContainerHydrator::unsetAfter($this->container, $firstElement::getName());
-        $serializedHydratedContainer = $hydratedContainer->serialize();
-        self::assertCount(1, $serializedHydratedContainer);
+        self::assertCount(1, $hydratedContainer);
     }
 
     public function testCanUnsetAfterLastElement(): void
     {
-        $serializedContainer = $this->container->serialize();
-        $lastElement = end($serializedContainer);
+        $lastElement = $this->container->end();
         $hydratedContainer = FeatureOverrideContainerHydrator::unsetAfter($this->container, $lastElement::getName());
-        $serializedHydratedContainer = $hydratedContainer->serialize();
-        self::assertCount(count($serializedContainer), $serializedHydratedContainer);
+        self::assertCount(count($this->container), $hydratedContainer);
     }
 }

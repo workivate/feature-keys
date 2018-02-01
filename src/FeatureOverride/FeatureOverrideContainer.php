@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace FeatureKeys\FeatureOverride;
 
-final class FeatureOverrideContainer
+final class FeatureOverrideContainer implements \Iterator, \Countable
 {
     private $overrides = [];
 
@@ -45,8 +45,38 @@ final class FeatureOverrideContainer
         return false;
     }
 
-    public function serialize(): array
+    public function current()
     {
-        return $this->overrides;
+       return current($this->overrides);
+    }
+
+    public function next()
+    {
+        return next($this->overrides);
+    }
+
+    public function key()
+    {
+        return key($this->overrides);
+    }
+
+    public function valid()
+    {
+        return $this->key() !== null;
+    }
+
+    public function rewind()
+    {
+        return reset($this->overrides);
+    }
+
+    public function end()
+    {
+        return end($this->overrides);
+    }
+
+    public function count()
+    {
+        return count($this->overrides);
     }
 }
