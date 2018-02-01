@@ -58,11 +58,6 @@ final class FeatureAccessContainer implements \Iterator, \Countable
         return isset($this->accesses[$featureAccessName]);
     }
 
-    public function getAll(): array
-    {
-        return $this->accesses;
-    }
-
     public function current()
     {
         return current($this->accesses);
