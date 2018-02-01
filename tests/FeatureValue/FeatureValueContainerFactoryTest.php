@@ -19,7 +19,7 @@ class FeatureValueContainerFactoryTest extends TestCase
         self::assertInstanceOf(FeatureValueContainer::class, $container);
         self::assertCount(
             $this->countConfigElements($config),
-            $container->getAll()
+            $container
         );
     }
 
