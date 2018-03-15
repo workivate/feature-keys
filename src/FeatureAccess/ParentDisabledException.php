@@ -25,6 +25,4 @@ class ParentDisabledException extends FeatureAccessContainerException
     {
         return $this->parentAccessName;
     }
-
-
 }
