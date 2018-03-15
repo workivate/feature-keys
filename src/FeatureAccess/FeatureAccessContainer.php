@@ -20,7 +20,7 @@ final class FeatureAccessContainer
         foreach ($this->accesses as $access) {
             $parent = $access->getParent();
             if ($parent !== null && $access->isEnabled() && $parent->isDisabled()) {
-                throw FeatureAccessContainerException::parentDisabled($access::getName(), $parent::getName());
+                throw ParentDisabledException::parentDisabled($access::getName(), $parent::getName());
             }
         }
     }
