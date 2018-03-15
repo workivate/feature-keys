@@ -5,6 +5,7 @@ namespace FeatureKeys\Tests\FeatureAccess;
 
 use FeatureKeys\FeatureAccess\FeatureAccessContainer;
 use FeatureKeys\FeatureAccess\FeatureAccessContainerException;
+use FeatureKeys\FeatureAccess\ParentDisabledException;
 use FeatureKeys\Tests\StarWars\FeatureAccess\Accesses\Jedi\JediAccess;
 use FeatureKeys\Tests\StarWars\FeatureAccess\Accesses\Jedi\ObiWanAccess;
 use FeatureKeys\Tests\StarWars\FeatureAccess\Accesses\Jedi\QuiGonAccess;
@@ -70,7 +71,7 @@ class FeatureAccessContainerTest extends TestCase
             $plagueisAccess,
         ];
 
-        $expectedException = FeatureAccessContainerException::parentDisabled(
+        $expectedException = ParentDisabledException::create(
             $plagueisAccess::getName(),
             $sithAccess::getName()
         );
