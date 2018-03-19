@@ -17,6 +17,11 @@ class ValueType
         return new self('option');
     }
 
+    public static function float(): self
+    {
+        return new self('float');
+    }
+
     public static function integer(): self
     {
         return new self('integer');
