@@ -8,13 +8,23 @@ use FeatureKeys\FeatureAccess\ParentDisabledException;
 
 final class MakeAccessContainerValid
 {
-    public function execute(FeatureAccessContainer $container): void
+    private $enabledAccessesNames = [];
+
+    /**
+     * Recursively enable parent accesses until the container is valid.
+     * @return a list of enabled accesses' names.
+     */
+    public function execute(FeatureAccessContainer $container): array
     {
         try {
             $container->validate();
         } catch (ParentDisabledException $exception) {
-            $container->get($exception->getParentAccessName())->setEnabled(true);
+            $parentAccess = $container->get($exception->getParentAccessName());
+            $parentAccess->setEnabled(true);
+            $this->enabledAccessesNames[] = $parentAccess::getName();
             $this->execute($container);
         }
+
+        return $this->enabledAccessesNames;
     }
 }

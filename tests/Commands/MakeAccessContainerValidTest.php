@@ -30,8 +30,10 @@ class MakeAccessContainerValidTest extends TestCase
         $container->get(QuiGonAccess::getName())->setEnabled(true);
 
         $makeContainerValid = new MakeAccessContainerValid(new FeatureAccessConfig());
-        $makeContainerValid->execute($container);
+        $enabledAccesses = $makeContainerValid->execute($container);
 
-        self::assertInstanceOf(FeatureAccessContainer::class, $container);
+        self::assertCount(2, $enabledAccesses);
+        self::assertContains(JediAccess::getName(), $enabledAccesses);
+        self::assertContains(YodaAccess::getName(), $enabledAccesses);
     }
 }
