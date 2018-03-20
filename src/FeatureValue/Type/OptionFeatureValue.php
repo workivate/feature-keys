@@ -36,7 +36,8 @@ abstract class OptionFeatureValue extends FeatureValue
     private function validateValue($value): void
     {
         if (!in_array($value, $this->options, true)) {
-            throw new \InvalidArgumentException("Value $value does not match any of the allowed values.");
+            $featureValueName = self::getName();
+            throw new \InvalidArgumentException("$featureValueName: Value $value does not match any of the allowed values.");
         }
     }
 }
