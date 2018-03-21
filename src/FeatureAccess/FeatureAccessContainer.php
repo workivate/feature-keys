@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace FeatureKeys\FeatureAccess;
 
-final class FeatureAccessContainer
+final class FeatureAccessContainer implements \Iterator, \Countable
 {
     private $accesses = [];
 
@@ -27,7 +27,7 @@ final class FeatureAccessContainer
 
     public function override(FeatureAccessContainer $container): void
     {
-        foreach ($container->getAll() as $access) {
+        foreach ($container as $access) {
             try {
                 $this->get($access::getName())->setEnabled($access->isEnabled());
             } catch (FeatureAccessContainerException $exception) {
@@ -58,8 +58,33 @@ final class FeatureAccessContainer
         return isset($this->accesses[$featureAccessName]);
     }
 
-    public function getAll(): array
+    public function current()
     {
-        return $this->accesses;
+        return current($this->accesses);
+    }
+
+    public function next()
+    {
+        return next($this->accesses);
+    }
+
+    public function key()
+    {
+        return key($this->accesses);
+    }
+
+    public function valid(): bool
+    {
+        return $this->key() !== null;
+    }
+
+    public function rewind()
+    {
+        return reset($this->accesses);
+    }
+
+    public function count()
+    {
+        return count($this->accesses);
     }
 }

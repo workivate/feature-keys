@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace FeatureKeys\FeatureValue;
 
-final class FeatureValueContainer
+final class FeatureValueContainer implements \Iterator, \Countable
 {
     private $values = [];
 
@@ -16,7 +16,7 @@ final class FeatureValueContainer
 
     public function override(FeatureValueContainer $container): void
     {
-        foreach ($container->getAll() as $value) {
+        foreach ($container as $value) {
             try {
                 $this->get($value::getName())->setValue($value->getValue());
             } catch (FeatureValueContainerException $exception) {
@@ -46,8 +46,33 @@ final class FeatureValueContainer
         return isset($this->values[$FeatureValueName]);
     }
 
-    public function getAll(): array
+    public function current()
     {
-        return $this->values;
+        return current($this->values);
+    }
+
+    public function next()
+    {
+        return next($this->values);
+    }
+
+    public function key()
+    {
+        return key($this->values);
+    }
+
+    public function valid(): bool
+    {
+        return $this->key() !== null;
+    }
+
+    public function rewind()
+    {
+        return reset($this->values);
+    }
+
+    public function count()
+    {
+        return count($this->values);
     }
 }

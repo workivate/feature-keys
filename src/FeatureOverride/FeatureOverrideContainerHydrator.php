@@ -8,7 +8,7 @@ final class FeatureOverrideContainerHydrator
     public static function unsetAfter(FeatureOverrideContainer $container, string $lastOverrideName): FeatureOverrideContainer
     {
         $hydratedContainer = new FeatureOverrideContainer(...[]);
-        foreach ($container->serialize() as $override) {
+        foreach ($container as $override) {
             $hydratedContainer->set($override);
             if ($override::getName() === $lastOverrideName) {
                 return $hydratedContainer;

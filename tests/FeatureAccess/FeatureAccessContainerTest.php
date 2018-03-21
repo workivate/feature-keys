@@ -101,6 +101,6 @@ class FeatureAccessContainerTest extends TestCase
         self::assertTrue($container->get(YodaAccess::getName())->isEnabled());
         self::assertTrue($container->get(QuiGonAccess::getName())->isEnabled());
         self::assertTrue($container->get(ObiWanAccess::getName())->isDisabled());
-        self::assertCount(4, $container->getAll());
+        self::assertCount(4, $container);
     }
 }

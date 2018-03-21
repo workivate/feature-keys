@@ -76,6 +76,6 @@ class FeatureValueContainerTest extends TestCase
         self::assertSame('red', $container->get(LightSaberColor::getName())->getValue());
         self::assertFalse($container->get(DrawnToTheDarkSide::getName())->getValue());
         self::assertSame('adept', $container->get(SithTrainingLevel::getName())->getValue());
-        self::assertCount(3, $container->getAll());
+        self::assertCount(3, $container);
     }
 }
