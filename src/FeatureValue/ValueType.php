@@ -14,12 +14,12 @@ class ValueType
 
     public static function integerOption(): self
     {
-        return new self('integerOption');
+        return new self('integer option');
     }
 
     public static function stringOption(): self
     {
-        return new self('stringOption');
+        return new self('string option');
     }
 
     public static function float(): self
