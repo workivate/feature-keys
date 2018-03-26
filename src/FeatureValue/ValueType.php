@@ -12,9 +12,14 @@ class ValueType
         $this->type = $type;
     }
 
-    public static function option(): self
+    public static function integerOption(): self
     {
-        return new self('option');
+        return new self('integerOption');
+    }
+
+    public static function stringOption(): self
+    {
+        return new self('stringOption');
     }
 
     public static function float(): self

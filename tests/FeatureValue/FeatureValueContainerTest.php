@@ -68,14 +68,14 @@ class FeatureValueContainerTest extends TestCase
 
         $overridingContainer = new FeatureValueContainer(...[
             new LightSaberColor('red'),
-            new SithTrainingLevel('adept'),
+            new SithTrainingLevel(0),
         ]);
 
         $container->override($overridingContainer);
 
         self::assertSame('red', $container->get(LightSaberColor::getName())->getValue());
         self::assertFalse($container->get(DrawnToTheDarkSide::getName())->getValue());
-        self::assertSame('adept', $container->get(SithTrainingLevel::getName())->getValue());
+        self::assertSame(0, $container->get(SithTrainingLevel::getName())->getValue());
         self::assertCount(3, $container->getAll());
     }
 }

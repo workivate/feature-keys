@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=0);
 
-namespace FeatureKeys\FeatureValue\Type;
+namespace FeatureKeys\FeatureValue\Type\OptionFeatureValue;
 
 use FeatureKeys\FeatureValue\FeatureValue;
 use FeatureKeys\FeatureValue\ValueType;
@@ -10,16 +10,11 @@ abstract class OptionFeatureValue extends FeatureValue
 {
     private $options;
 
-    protected function __construct($value, array $options)
+    protected function __construct($value, array $options, ValueType $type)
     {
         $this->options = $options;
-        $this->validateValue($value);
-        parent::__construct($value, ValueType::option());
-    }
-
-    public function getValue()
-    {
-        return $this->value;
+        $this->validateOption($value);
+        parent::__construct($value, $type);
     }
 
     public function getOptions(): array
@@ -27,15 +22,9 @@ abstract class OptionFeatureValue extends FeatureValue
         return $this->options;
     }
 
-    public function setValue($value): void
+    protected function validateOption($value): void
     {
-        $this->validateValue($value);
-        $this->value = $value;
-    }
-
-    private function validateValue($value): void
-    {
-        if (!in_array($value, $this->options, true)) {
+        if (!\in_array($value, $this->options, true)) {
             $allowedValues = json_encode($this->options);
             throw new \InvalidArgumentException("Value $value does not match any of the allowed values: $allowedValues");
         }

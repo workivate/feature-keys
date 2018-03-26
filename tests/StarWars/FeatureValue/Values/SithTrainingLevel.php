@@ -3,25 +3,24 @@ declare(strict_types=1);
 
 namespace FeatureKeys\Tests\StarWars\FeatureValue\Values;
 
-use FeatureKeys\FeatureValue\Type\OptionFeatureValue;
 
-class SithTrainingLevel extends OptionFeatureValue
+use FeatureKeys\FeatureValue\Type\OptionFeatureValue\IntegerOptionFeatureValue;
+
+class SithTrainingLevel extends IntegerOptionFeatureValue
 {
     private const NAME = 'SITH_TRAINING_LEVEL';
 
     private const OPTIONS = [
-        'minion',
-        'adept',
-        'acolyte',
-        'assassin',
-        'warrior',
-        'marauder',
-        'lord',
+        0,
+        7,
+        15,
+        52,
+        89
     ];
 
     private const DESCRIPTION = 'Defines the sith\'s training level.';
 
-    public function __construct(string $value = 'minion')
+    public function __construct(int $value = 0)
     {
         parent::__construct($value, self::OPTIONS);
     }
@@ -31,7 +30,7 @@ class SithTrainingLevel extends OptionFeatureValue
         return self::NAME;
     }
 
-    public function getValue(): string
+    public function getValue(): int
     {
         return $this->value;
     }
