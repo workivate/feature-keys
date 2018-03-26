@@ -7,7 +7,6 @@ use FeatureKeys\FeatureValue\ValueType;
 
 abstract class StringOptionFeatureValue extends OptionFeatureValue
 {
-
     protected function __construct(string $value, array $options)
     {
         parent::__construct($value, $options, ValueType::stringOption());
@@ -23,6 +22,4 @@ abstract class StringOptionFeatureValue extends OptionFeatureValue
         $this->validateOption($value);
         $this->value = $value;
     }
-
-
 }

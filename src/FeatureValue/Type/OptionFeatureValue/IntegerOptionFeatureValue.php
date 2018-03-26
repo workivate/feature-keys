@@ -7,7 +7,6 @@ use FeatureKeys\FeatureValue\ValueType;
 
 abstract class IntegerOptionFeatureValue extends OptionFeatureValue
 {
-
     protected function __construct(int $value, array $options)
     {
         parent::__construct($value, $options, ValueType::stringOption());
