@@ -3,9 +3,9 @@ declare(strict_types=1);
 
 namespace FeatureKeys\Tests\StarWars\FeatureValue\Values;
 
-use FeatureKeys\FeatureValue\Type\OptionFeatureValue;
+use FeatureKeys\FeatureValue\Type\OptionFeatureValue\StringOptionFeatureValue;
 
-class JediTrainingLevel extends OptionFeatureValue
+class JediTrainingLevel extends StringOptionFeatureValue
 {
     private const NAME = 'JEDI_TRAINING_LEVEL';
 

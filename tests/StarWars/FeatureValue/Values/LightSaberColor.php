@@ -3,9 +3,10 @@ declare(strict_types=1);
 
 namespace FeatureKeys\Tests\StarWars\FeatureValue\Values;
 
-use FeatureKeys\FeatureValue\Type\OptionFeatureValue;
 
-class LightSaberColor extends OptionFeatureValue
+use FeatureKeys\FeatureValue\Type\OptionFeatureValue\StringOptionFeatureValue;
+
+class LightSaberColor extends StringOptionFeatureValue
 {
     private const NAME = 'LIGHT_SABER_COLOR';
 
