@@ -9,9 +9,13 @@ abstract class FeatureAccess
 
     private $parent;
 
-    public function __construct(bool $enabled = false)
+    private $overridden;
+
+    public function __construct()
     {
-        $this->enabled = $enabled;
+        $this->enabled = false;
+        $this->overridden = false;
+
     }
 
     abstract public static function getName(): string;
@@ -30,6 +34,7 @@ abstract class FeatureAccess
 
     public function setEnabled(bool $enabled): void
     {
+        $this->overridden = true;
         $this->enabled = $enabled;
     }
 
@@ -41,6 +46,11 @@ abstract class FeatureAccess
     public function getParent(): ?self
     {
         return $this->parent;
+    }
+
+    public function isOverridden(): bool
+    {
+        return $this->overridden;
     }
 
     public function __toString(): string
