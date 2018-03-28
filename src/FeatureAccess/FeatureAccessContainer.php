@@ -19,7 +19,11 @@ final class FeatureAccessContainer
     {
         foreach ($this->accesses as $access) {
             $parent = $access->getParent();
-            if ($parent !== null && $access->isEnabled() && $parent->isDisabled()) {
+            if (
+                $parent !== null
+                && $parent->isDisabled()
+                && ($access->isEnabled() || !$access->isOverridden())
+            ) {
                 throw ParentDisabledException::create($access::getName(), $parent::getName());
             }
         }
