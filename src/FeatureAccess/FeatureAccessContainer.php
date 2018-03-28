@@ -62,4 +62,21 @@ final class FeatureAccessContainer
     {
         return $this->accesses;
     }
+
+    public function getChildren(string $parentAccessName): array
+    {
+        $children = [];
+
+        foreach ($this->accesses as $access) {
+            if ($access->getParent() === null) {
+                continue;
+            }
+
+            if ($access->getParent()::getName() === $parentAccessName) {
+                $children[] = $access;
+            }
+        }
+
+        return $children;
+    }
 }

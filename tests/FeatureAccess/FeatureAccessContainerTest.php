@@ -103,4 +103,19 @@ class FeatureAccessContainerTest extends TestCase
         self::assertTrue($container->get(ObiWanAccess::getName())->isDisabled());
         self::assertCount(4, $container->getAll());
     }
+
+    public function testCanGetChildren(): void
+    {
+        $jediAccess = new JediAccess(true);
+        $yodaAccess = new YodaAccess(true);
+        $quiGonAccess = new QuiGonAccess(false);
+
+        $yodaAccess->setParent($jediAccess);
+        $quiGonAccess->setParent($jediAccess);
+
+        $container = new FeatureAccessContainer(...[$jediAccess, $yodaAccess, $quiGonAccess]);
+
+        $jediChildren = $container->getChildren($jediAccess::getName());
+        self::assertCount(2, $jediChildren);
+    }
 }
