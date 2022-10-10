@@ -5,6 +5,9 @@ namespace FeatureKeys\FeatureValue\Type\OptionFeatureValue;
 
 use FeatureKeys\FeatureValue\ValueType;
 
+/**
+ * @deprecated No longer supported, no replacement is given
+ */
 abstract class IntegerOptionFeatureValue extends OptionFeatureValue
 {
     protected function __construct(int $value, array $options)

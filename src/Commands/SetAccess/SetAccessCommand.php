@@ -6,6 +6,9 @@ namespace FeatureKeys\Commands\SetAccess;
 use FeatureKeys\FeatureAccess\FeatureAccess;
 use FeatureKeys\FeatureOverride\FeatureOverride;
 
+/**
+ * @deprecated No longer supported, no replacement is given
+ */
 final class SetAccessCommand
 {
     private $access;

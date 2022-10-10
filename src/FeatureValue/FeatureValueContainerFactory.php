@@ -5,6 +5,9 @@ namespace FeatureKeys\FeatureValue;
 
 use FeatureKeys\FeatureConfig\FeatureClassNameIterator;
 
+/**
+ * @deprecated No longer supported, no replacement is given
+ */
 final class FeatureValueContainerFactory
 {
     private $config;

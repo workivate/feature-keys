@@ -6,6 +6,9 @@ namespace FeatureKeys\Commands;
 use FeatureKeys\FeatureAccess\FeatureAccessContainer;
 use FeatureKeys\FeatureAccess\ParentDisabledException;
 
+/**
+ * @deprecated No longer supported, no replacement is given
+ */
 final class MakeAccessContainerValid
 {
     private $enabledAccessesNames = [];

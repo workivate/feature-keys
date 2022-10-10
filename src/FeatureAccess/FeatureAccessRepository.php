@@ -6,6 +6,9 @@ namespace FeatureKeys\FeatureAccess;
 use FeatureKeys\FeatureOverride\FeatureOverride;
 use FeatureKeys\FeatureOverride\FeatureOverrideContainer;
 
+/**
+ * @deprecated No longer supported, no replacement is given
+ */
 interface FeatureAccessRepository
 {
     public function getForSpecificOverride(FeatureOverride $featureOverride, bool $includeUnset = false): FeatureAccessContainer;

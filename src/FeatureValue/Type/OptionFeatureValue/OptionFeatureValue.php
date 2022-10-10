@@ -6,6 +6,9 @@ namespace FeatureKeys\FeatureValue\Type\OptionFeatureValue;
 use FeatureKeys\FeatureValue\FeatureValue;
 use FeatureKeys\FeatureValue\ValueType;
 
+/**
+ * @deprecated No longer supported, no replacement is given
+ */
 abstract class OptionFeatureValue extends FeatureValue
 {
     private $options;
