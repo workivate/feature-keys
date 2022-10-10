@@ -5,6 +5,9 @@ namespace FeatureKeys\Commands\SetAccess;
 
 use FeatureKeys\FeatureAccess\FeatureAccessRepository;
 
+/**
+ * @deprecated No longer supported, no replacement is given
+ */
 final class SetAccessCommandHandler
 {
     private $repository;

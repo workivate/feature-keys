@@ -3,6 +3,9 @@ declare(strict_types=1);
 
 namespace FeatureKeys\FeatureValue;
 
+/**
+ * @deprecated No longer supported, no replacement is given
+ */
 abstract class FeatureValue
 {
     protected $value;

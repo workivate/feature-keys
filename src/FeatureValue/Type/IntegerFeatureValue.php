@@ -6,6 +6,9 @@ namespace FeatureKeys\FeatureValue\Type;
 use FeatureKeys\FeatureValue\FeatureValue;
 use FeatureKeys\FeatureValue\ValueType;
 
+/**
+ * @deprecated No longer supported, no replacement is given
+ */
 abstract class IntegerFeatureValue extends FeatureValue
 {
     protected function __construct(int $value)

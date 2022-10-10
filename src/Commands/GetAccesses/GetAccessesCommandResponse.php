@@ -5,6 +5,9 @@ namespace FeatureKeys\Commands\GetAccesses;
 
 use FeatureKeys\FeatureAccess\FeatureAccessContainer;
 
+/**
+ * @deprecated No longer supported, no replacement is given
+ */
 final class GetAccessesCommandResponse
 {
     private $accesses;

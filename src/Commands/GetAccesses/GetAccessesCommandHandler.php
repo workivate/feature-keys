@@ -5,6 +5,9 @@ namespace FeatureKeys\Commands\GetAccesses;
 
 use FeatureKeys\FeatureAccess\FeatureAccessRepository;
 
+/**
+ * @deprecated No longer supported, no replacement is given
+ */
 final class GetAccessesCommandHandler
 {
     private $repository;

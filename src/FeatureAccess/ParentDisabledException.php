@@ -3,6 +3,9 @@ declare(strict_types=1);
 
 namespace FeatureKeys\FeatureAccess;
 
+/**
+ * @deprecated No longer supported, no replacement is given
+ */
 class ParentDisabledException extends FeatureAccessContainerException
 {
     private $accessName;

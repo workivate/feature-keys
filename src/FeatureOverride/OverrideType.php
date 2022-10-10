@@ -3,6 +3,9 @@ declare(strict_types=1);
 
 namespace FeatureKeys\FeatureOverride;
 
+/**
+ * @deprecated No longer supported, no replacement is given
+ */
 final class OverrideType
 {
     private $value;

@@ -5,6 +5,9 @@ namespace FeatureKeys\FeatureAccess;
 
 use FeatureKeys\FeatureConfig\ClassName;
 
+/**
+ * @deprecated No longer supported, no replacement is given
+ */
 final class FeatureAccessConfigElement
 {
     private $accessClassName;

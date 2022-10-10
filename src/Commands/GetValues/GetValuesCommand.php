@@ -5,6 +5,9 @@ namespace FeatureKeys\Commands\GetValues;
 
 use FeatureKeys\FeatureOverride\FeatureOverrideContainer;
 
+/**
+ * @deprecated No longer supported, no replacement is given
+ */
 final class GetValuesCommand
 {
     private $overrides;

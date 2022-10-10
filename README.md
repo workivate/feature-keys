@@ -1,3 +1,7 @@
+# DEPRECATED
+
+This library will no longer be supported and receive any updates. If you use it, switch to something else, there is no replacement given for it.
+
 # The New Feature Keys 
 ### Domain Framework
 

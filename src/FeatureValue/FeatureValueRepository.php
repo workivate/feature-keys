@@ -6,6 +6,9 @@ namespace FeatureKeys\FeatureValue;
 use FeatureKeys\FeatureOverride\FeatureOverride;
 use FeatureKeys\FeatureOverride\FeatureOverrideContainer;
 
+/**
+ * @deprecated No longer supported, no replacement is given
+ */
 interface FeatureValueRepository
 {
     public function getForSpecificOverride(FeatureOverride $featureOverride, bool $includeUnset = false): FeatureValueContainer;

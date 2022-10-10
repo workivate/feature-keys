@@ -5,6 +5,9 @@ namespace FeatureKeys\Commands\GetAccesses;
 
 use FeatureKeys\FeatureOverride\FeatureOverrideContainer;
 
+/**
+ * @deprecated No longer supported, no replacement is given
+ */
 final class GetAccessesCommand
 {
     private $overrides;

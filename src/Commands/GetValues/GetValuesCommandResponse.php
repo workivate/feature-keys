@@ -5,6 +5,9 @@ namespace FeatureKeys\Commands\GetValues;
 
 use FeatureKeys\FeatureValue\FeatureValueContainer;
 
+/**
+ * @deprecated No longer supported, no replacement is given
+ */
 final class GetValuesCommandResponse
 {
     private $values;

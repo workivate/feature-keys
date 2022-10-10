@@ -6,6 +6,9 @@ namespace FeatureKeys\Commands\SetValue;
 use FeatureKeys\FeatureOverride\FeatureOverride;
 use FeatureKeys\FeatureValue\FeatureValue;
 
+/**
+ * @deprecated No longer supported, no replacement is given
+ */
 final class SetValueCommand
 {
     private $value;

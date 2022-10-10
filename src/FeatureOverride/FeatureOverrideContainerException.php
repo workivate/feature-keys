@@ -3,6 +3,9 @@ declare(strict_types=1);
 
 namespace FeatureKeys\FeatureOverride;
 
+/**
+ * @deprecated No longer supported, no replacement is given
+ */
 class FeatureOverrideContainerException extends \RuntimeException
 {
     public static function overrideAlreadySet(string $overrideName): self
